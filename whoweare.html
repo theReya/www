@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن</title>
+    <link rel="stylesheet" href="whoweare.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>من نحن</h1>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container">
+             <img src="uqu.jfif" alt="فريق الصيانة في العمل" class="responsive-image">
+            <h2>نبذة عنا</h2>
+            <p>
+                نحن طلاب من جامعة أم القرى تخصصنا برمجة وعلوم حاسب من الكلية التطبيقية   نقوم في تصميم وتطوير المواقع الإلكترونية,
+                نمتلك المهارة والخبرة الكافية في تحويل الأفكار إلى واقع رقمي متميز.
+                نتقن استخدام أحدث التقنيات وأدوات البرمجة لإنشاء مواقع ذات أداء عالي وتصاميم فريدة تلبي احتياجات العملاء وتحقق أهدافهم.
+                نركز على تقديم تجربة مستخدم مميزة ومواقع متجاوبة مع مختلف الأجهزة، مع الحرص على التفاصيل والإبداع في كل مشروع نعمل عليه.
+            </p>
+            
+               
+        </div>
+    </section>
+    <section class="team-section">
+        <div class="container">
+            <h2>برمجة الموقع بشكل كامل</h2>
+            <ul>
+                <li> ريان محسن مجرشي  /  RayanMMajrshi@hotmail.com</li>
+                <li>عبدالعزيز تركي المطرفي /  zabu7mdz@gmail.com</li>
+                <li>منصور سلطان السعيدي</li>
+                <li>عزام المسعودي</li>
+                <li>معاذ المحمادي /  Moathalmehmadi77@gmail.com</li>
+                <li>صالح فهد اللحياني</li>
+                <li>وسام عبدالعزيز مفتي /  Wesammu1@outlook.com</li>
+                <li>عبدالرحمن علي بكر /  d7my.1736@gmail.com</li>
+                <li>حمد عادل المولد /  enderyking@gmail.com</li>
+                <li>احمد ياسين سادس /  ahaz2813@gmail.com</li>
+            </ul>
+        </div>
+    </section>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const valueCards = document.querySelectorAll('.value-card');
+            const observerOptions = { threshold: 0.5 };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            valueCards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
